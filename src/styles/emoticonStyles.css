@@ -1,0 +1,28 @@
+.chat-container {
+  position: relative;
+}
+
+.emoticon-options {
+  position: absolute;
+  top: -40px; /* Adjust the distance from the input field */
+  left: 0;
+  background-color: #393636;
+  border: 1px solid #726666;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.emoticon-options button {
+  cursor: pointer;
+}
+
+.emoticon-options button:hover {
+  background-color: #4e4a4a;
+}
+
+.emoticon-button {
+  cursor: pointer;
+}
