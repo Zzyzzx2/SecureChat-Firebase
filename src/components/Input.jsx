@@ -3,7 +3,13 @@ import "../styles/emoticonStyles.css";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 
-const Input = ({ setNewMessage, newMessage, handleKeyPress, handleSubmit }) => {
+const Input = ({
+  setNewMessage,
+  newMessage,
+  handleKeyPress,
+  handleSubmit,
+  inputRef,
+}) => {
   const [showEmoticons, setShowEmoticons] = useState(false);
 
   const handleEmoticonClick = (emoji) => {
@@ -27,6 +33,7 @@ const Input = ({ setNewMessage, newMessage, handleKeyPress, handleSubmit }) => {
       onClick={handleOutsideClick}
     >
       <input
+        ref={inputRef}
         className="flex-grow bg-[#757c748b] p-2 rounded-md m-1 overflow-auto"
         onChange={(e) => setNewMessage(e.target.value)}
         value={newMessage}

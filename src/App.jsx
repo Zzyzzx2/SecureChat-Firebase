@@ -29,6 +29,13 @@ function App() {
       </>
     );
   }
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      setRoom(roomInputRef.current.value);
+    }
+  };
   return (
     <>
       {room ? (
@@ -41,6 +48,7 @@ function App() {
           <input
             className="rounded-lg m-2 p-2 text-teal-100 bg-neutral-700"
             ref={roomInputRef}
+            onKeyDown={handleKeyPress}
           />
           <button
             className="hover:bg-emerald-700 hover:border-cyan-600 hover:border-2"
